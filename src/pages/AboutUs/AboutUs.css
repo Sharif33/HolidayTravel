@@ -1,0 +1,13 @@
+.bg-about{
+    background-image: url('../../images/slide-3.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.bg-about2{
+    background-image: url('../../images/aboutUs.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/* ,linear-gradient(-255deg,rgba (23,13,177,0.7)35%, rgba(236,50,87,0.7)100%) */
