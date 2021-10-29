@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PrivateRoute from './login/PrivateRoute';
 import NotFound from './pages/NotFound/NotFound';
-import Resort from './pages/Resorts/Resort';
+// import Resort from './pages/Resorts/Resort';
 import SingleResort from './pages/Resorts/SingleResort';
 import Login from './login/Login';
 import Home from './pages/Home/Home';
@@ -12,6 +12,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import Footer from './shared/Footer/Footer';
 import Header from './shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
+import Resorts from './pages/Resorts/Resorts';
 
 
 function App() {
@@ -30,8 +31,8 @@ function App() {
             <Route exact path="/about">
               <AboutUs></AboutUs>
             </Route>
-            <Route exact path="/resort">
-              <Resort></Resort>
+            <Route exact path="/resorts">
+              <Resorts></Resorts>
             </Route>
             <PrivateRoute exact path="/resort/:id">
               <SingleResort></SingleResort>
