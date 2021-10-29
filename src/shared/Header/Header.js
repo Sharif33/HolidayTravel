@@ -10,7 +10,7 @@ const Header = () => {
         color: "black",
         backgroundColor: "white",
         transition: ".5s ease-in",
-        borderBottom: "2px solid red",
+        borderBottom: "1px solid red",
     };
     return (
         <div>
@@ -21,25 +21,54 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav ms-auto">
+                        {
+                            user?.email ? <ul className="navbar-nav ms-auto">
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " aria-current="page" to="/home">Home</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/resort">Resorts</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/about">About Us</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Contact Us</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">My Oredrs</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Manage All Orders</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Add a Resort</NavLink>
+                                </li>
 
-                            <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " aria-current="page" to="/home">Home</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/resort">Resorts</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/about">About Us</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/contact">Contact Us</NavLink>
-                            </li>
+                                <li className="nav-item">
+                                    <button onClick={logOut} className="btn btn-danger fs-6">Logout</button>
+                                </li>
 
-                            <li className="nav-item">
-                                {user?.email ? <button onClick={logOut} className="btn btn-danger fs-5">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/login">Sign In <span><i className="fas fa-user"></i></span> </NavLink>}
-                            </li>
-                        </ul>
+                            </ul>
+                                : <ul className="navbar-nav ms-auto">
+
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " aria-current="page" to="/home">Home</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/resort">Resorts</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/about">About Us</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Contact Us</NavLink>
+                                    </li>
+                                    <li className="nav-item">
+                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/login">Sign In <span><i className="fas fa-user"></i></span> </NavLink>
+                                    </li>
+                                </ul>
+                        }
                         <div className="text-center">
                             <img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
                             <span className="text-light">{user?.displayName}</span>
