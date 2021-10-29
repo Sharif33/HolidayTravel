@@ -56,7 +56,7 @@ const Header = () => {
                                         <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " aria-current="page" to="/home">Home</NavLink>
                                     </li>
                                     <li className="nav-item">
-                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/resort">Resorts</NavLink>
+                                        <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/resorts">Resorts</NavLink>
                                     </li>
                                     <li className="nav-item">
                                         <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/about">About Us</NavLink>

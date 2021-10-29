@@ -3,10 +3,10 @@ import './AboutUs.css';
 
 const AboutUs = () => {
     return (
-        <div>
+        <div style={{ overflowX: "hidden" }}>
             <div className="bg-about">
                 <div className="container p-5">
-                    <h1 className="text-center text-info text-decoration-underline p-5">About HolidayTravel™</h1>
+                    <h1 className="text-center text-warning p-2" style={{ fontWeight: "300" }}>About HolidayTravel™</h1>
                     <p className="text-light text-center">Founded in 1996 in Amsterdam, HolidayTravel has grown from a small Dutch startup to one of the world’s leading digital travel companies. Part of Booking Holdings Inc. (NASDAQ: BKNG), HolidayTravel’s mission is to make it easier for everyone to experience the world. <br /> <br />
 
                         By investing in the technology that helps take the friction out of travel, HolidayTravel seamlessly connects millions of travellers with memorable experiences, a range of transport options and incredible places to stay - from homes to hotels and much more. As one of the world’s largest travel marketplaces for both established brands and entrepreneurs of all sizes, HolidayTravel enables properties all over the world to reach a global audience and grow their businesses. <br /> <br />
