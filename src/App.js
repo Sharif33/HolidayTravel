@@ -13,6 +13,9 @@ import Footer from './shared/Footer/Footer';
 import Header from './shared/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
 import Resorts from './pages/Resorts/Resorts';
+import MyOrders from './pages/MyOrders/MyOrders';
+import AddResort from './pages/AddResort/AddResort';
+import ManageOrder from './pages/ManageOrder/ManageOrder';
 
 
 function App() {
@@ -39,6 +42,15 @@ function App() {
             </PrivateRoute>
             <Route exact path="/contact">
               <ContactUs></ContactUs>
+            </Route>
+            <Route exact path="/myOrders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route exact path="/addResort">
+              <AddResort></AddResort>
+            </Route>
+            <Route exact path="/manageOrder">
+              <ManageOrder></ManageOrder>
             </Route>
             <Route exact path="/login">
               <Login></Login>

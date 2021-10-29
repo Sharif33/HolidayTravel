@@ -8,7 +8,7 @@ const SingleResort = () => {
     const [resorts, setResorts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/resorts/${id}`)
+        fetch(`https://gentle-taiga-36884.herokuapp.com/resorts/${id}`)
             .then(res => res.json())
             .then(data => setResorts(data))
     }, [id])

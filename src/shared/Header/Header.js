@@ -36,13 +36,13 @@ const Header = () => {
                                     <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Contact Us</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">My Oredrs</NavLink>
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/myOrders">My Oredrs</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Manage All Orders</NavLink>
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/manageOrder">Manage All Orders</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/contact">Add a Resort</NavLink>
+                                    <NavLink activeStyle={activeStyle} className="nav-link active mx-1 fs-6 " to="/addResort">Add a Resort</NavLink>
                                 </li>
 
                                 <li className="nav-item">

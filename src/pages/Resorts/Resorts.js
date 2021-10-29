@@ -7,7 +7,7 @@ const Resorts = () => {
     const [resorts, setResorts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/resorts')
+        fetch('https://gentle-taiga-36884.herokuapp.com/resorts')
             .then(res => res.json())
             .then(data => setResorts(data))
     }, [])
