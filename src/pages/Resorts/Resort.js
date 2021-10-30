@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Resort = ({ resort }) => {
-    const { _id, name, image, location, description, rating } = resort;
+    const { _id, name, image, location, description } = resort;
     return (
         <div>
             <div className="col rounded shadow text-center">
@@ -10,7 +10,7 @@ const Resort = ({ resort }) => {
                     <img style={{ height: "15rem" }} src={image} className="card-img-top" alt="" />
                     <div className="p-4">
                         <div className="d-flex justify-content-center align-items-center">
-                            <small className="fw-bold text-secondary">{rating}.0 <span className="text-warning"><i className="fas fa-star"></i>
+                            <small className="fw-bold text-secondary"><span className="text-warning"><i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>

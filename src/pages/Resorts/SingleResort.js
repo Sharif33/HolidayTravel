@@ -13,8 +13,6 @@ const SingleResort = () => {
             .then(data => setResorts(data))
     }, [id])
 
-    // const foundResort = resorts.find(resort => resort.id == id)
-
     return (
         <div>
             <div className='container py-5 my-5'>
@@ -28,12 +26,8 @@ const SingleResort = () => {
                     </div>
                     <div className="col-md-6 border p-4">
                         <div className="">
-                            <h5 className='text-secondary'><small className="fw-bold text-secondary"><span className="text-warning"><i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i></span>
-                            </small>  <span> ({resorts?.reviews} peoples reviewed)</span></h5>
+                            <h5 className='text-secondary'>{resorts?.rating} <span className="text-warning"><i className="fas fa-star"></i></span><span> ({resorts?.reviews} </span><small className="text-secondary">reviews)
+                            </small> </h5>
                         </div>
                         <h2 className="text-info  py-3">Cost: <span className="text-danger fw-bold">{resorts?.cost} BDT</span> <span className="fs-6 ">(taxes and vates included)</span></h2>
 
