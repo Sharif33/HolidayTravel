@@ -10,7 +10,7 @@ const AddResort = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/resorts', data)
+        axios.post('https://gentle-taiga-36884.herokuapp.com/resorts', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

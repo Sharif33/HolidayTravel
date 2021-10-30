@@ -20,12 +20,12 @@ const SingleResort = () => {
 
     // post resort
 
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         console.log(data);
 
-        axios.post(`http://localhost:5000/orders`, data)
+        axios.post(`https://gentle-taiga-36884.herokuapp.com/orders`, data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Reserved successfully. Check My Order');
@@ -43,7 +43,6 @@ const SingleResort = () => {
                         <h3 style={{ color: "#62599F" }}>{resorts?.name}</h3>
                         <h5 className="text-decoration-underline" style={{ color: "#005562" }}>{resorts?.location}</h5>
                         <div className=" d-flex justify-contenet-end align-items-center">
-
                             <h4 className="text-info w-100 py-3">Cost: <span className="text-danger fw-bold">{resorts?.cost} BDT</span> <span className="fs-6 ">(taxes and vates included)</span></h4>
                             <h6 className='text-secondary w-100'>{resorts?.rating} <span className="text-warning"><i className="fas fa-star"></i></span><span> ({resorts?.reviews} </span><small className="text-secondary">reviews)
                             </small> </h6>
@@ -57,18 +56,22 @@ const SingleResort = () => {
                             <div className="shadow p-4 bg-custom rounded">
                                 <h3 className="text-light py-2">Reserve this Resort</h3>
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input defaultValue={resorts?.name} {...register("resort")} />
+                                    <input defaultValue={resorts?.name} {...register("resort", { required: true })} />
+                                    {errors.resort && <span className="text-warning">Please click again</span>}
                                     <input defaultValue={resorts?.cost} {...register("cost")} />
-
+                                    <input defaultValue="Pending..." {...register("status")} />
                                     <input defaultValue={user?.displayName} {...register("name")} />
                                     <input defaultValue={user?.email} {...register("email", { required: true })} />
+                                    {errors.email && <span className="text-warning">Please click again</span>}
                                     <input placeholder="Address"  {...register("address")} />
                                     <input placeholder="City and country"  {...register("city")} />
                                     <input placeholder="Phone number"  {...register("phone")} />
+                                    <input placeholder="Date" type="date" {...register("date")} />
 
-                                    <input defaultValue={resorts?.image} {...register("image")} />
+                                    <input defaultValue={resorts?.image} {...register("image", { required: true })} />
+                                    {errors.image && <span className="text-warning">Please click again</span>}
 
-                                    <input className="btn btn-outline-light" type="submit" />
+                                    <button className="btn btn-outline-light" type="submit">Reserved</button>
                                 </form>
                             </div>
                         </div>

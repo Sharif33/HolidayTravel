@@ -2,56 +2,50 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 
 const MyOrders = () => {
-    /* const { user } = useAuth();
-    const [orders, setOrders] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${user?.email}`)
-            .then((res) => res.json())
-            .then((data) => setOrders(data));
-    }, []);
-
-    console.log(orders); */
 
     let deleteCount = 0;
     const { user } = useAuth();
     const [orders, setOrders] = useState([]);
     const email = user?.email;
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${email}`)
+        fetch(`https://gentle-taiga-36884.herokuapp.com/myOrders/${email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [email, deleteCount]);
     // console.log(orders);
 
-    /*     //Delete Part
-        const [products, setProducts] = useState([]);
-        useEffect(() => {
-            fetch('http://localhost:5000/myOrders')
-                .then(res => res.json())
-                .then(data => {
-                    setProducts(data);
-                    console.log(products);
-                })
-        }, [products]);
-    
-        //DELETE AN Products
-        const handleDeleteUser = id => {
-            const url = `http://localhost:5000/myOrders/${id}`
+    //Delete Part
+    const [myOrders, setMyOrders] = useState([]);
+    useEffect(() => {
+        fetch('https://gentle-taiga-36884.herokuapp.com/orders')
+            .then(res => res.json())
+            .then(data => {
+                setMyOrders(data);
+            })
+    }, []);
+
+    //DELETE AN Products
+    const handleDeleteOrders = id => {
+        const proceed = window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            const url = `https://gentle-taiga-36884.herokuapp.com/myOrders/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
+                        alert('Canceled successfully');
                         console.log(data);
-                        const remainingProducts = orders.filter(order => order._id !== id);
-                        console.log(remainingProducts);
-                        console.log(products);
-                        setOrders(remainingProducts);
+                        const remainingOrders = orders.filter(order => order._id !== id);
+                        console.log(remainingOrders);
+                        console.log(myOrders);
+                        setOrders(remainingOrders);
                     }
                 })
-        } */
+        }
+    }
+
 
     return (
         <div className="container p-5">
@@ -59,13 +53,11 @@ const MyOrders = () => {
             <div className="row row-cols-md-4">
                 {
                     orders?.map(order =>
-
                         <div key={order._id} className="col">
-                            <h5>{order?.resort}</h5>
-                            <img src={order?.image} alt="" />
+                            <div className="d-flex justify-content-between"><button className="btn btn-outline-info">{order?.status}</button> <button onClick={() => handleDeleteOrders(order._id)} className="btn btn-danger">Cancel</button></div>
+                            <div><h5>{order?.resort}</h5>
+                                <img src={order?.image} alt="" /></div>
                         </div>
-
-
                     )
                 }
 
