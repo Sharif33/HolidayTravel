@@ -14,8 +14,8 @@ const Resorts = () => {
 
     return (
         <div className="container">
-            <div className="text-center  border-bottom border-primary p-4">
-                <h1 className="fw-bold">Best Resorts in United States</h1>
+            <div className="text-center pt-2">
+                <h2 className="fw-bold">Best Resorts in United States</h2>
                 <p className="text-secondary fs-4">Reserve any Resorts </p>
             </div>
             <div className="row row-cols-1 row-cols-md-3 m-2 g-4">

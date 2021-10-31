@@ -23,7 +23,7 @@ const SingleResort = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
 
         axios.post(`https://gentle-taiga-36884.herokuapp.com/orders`, data)
             .then(res => {
