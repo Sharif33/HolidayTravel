@@ -55,24 +55,29 @@ const SingleResort = () => {
                         <div className="add-resort">
                             <div className="shadow p-4 bg-custom rounded">
                                 <h3 className="text-light py-2">Reserve this Resort</h3>
-                                <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input defaultValue={resorts && resorts?.name} {...register("resort", { required: true })} />
-                                    {errors.resort && <span className="text-warning">This field is required. Please check again</span>}
-                                    <input defaultValue={resorts && resorts?.cost} {...register("cost")} />
-                                    <input defaultValue="Pending..." {...register("status")} />
-                                    <input defaultValue={user?.displayName} {...register("name")} />
-                                    <input defaultValue={user?.email} {...register("email", { required: true })} />
-                                    {errors.email && <span className="text-warning">This field is required.Please check again</span>}
-                                    <input placeholder="Address"  {...register("address")} />
-                                    <input placeholder="City and country"  {...register("city")} />
-                                    <input placeholder="Phone number"  {...register("phone")} />
-                                    <input placeholder="Date" type="date" {...register("date")} />
+                                <div>
+                                    {
+                                        resorts?.name && <form onSubmit={handleSubmit(onSubmit)}>
+                                            <input defaultValue={resorts?.name} {...register("resort", { required: true })} />
+                                            {errors.resort && <span className="text-warning">This field is required. </span>}
+                                            <input defaultValue={resorts?.cost} {...register("cost")} />
+                                            <input defaultValue="Pending..." {...register("status")} />
+                                            <input defaultValue={user?.displayName} {...register("name")} />
+                                            <input defaultValue={user?.email} {...register("email", { required: true })} />
+                                            {errors.email && <span className="text-warning">This field is required.</span>}
+                                            <input placeholder="Present Address"  {...register("address")} />
+                                            <input placeholder="City and Country"  {...register("city")} />
+                                            <input placeholder="Phone number"  {...register("phone", { required: true })} />
+                                            {errors.phone && <span className="text-warning">This field is required.</span>}
+                                            <input defaultValue={new Date()} type="date" {...register("date", { required: true })} />
+                                            {errors.date && <span className="text-warning">This field is required.</span>}
+                                            <input defaultValue={resorts?.image} {...register("image", { required: true })} />
+                                            {errors.image && <span className="text-warning">This field is required.</span>}
 
-                                    <input defaultValue={resorts && resorts?.image} {...register("image", { required: true })} />
-                                    {errors.image && <span className="text-warning">This field is required.Please check again</span>}
-
-                                    <button className="btn btn-outline-light" type="submit">Reserved</button>
-                                </form>
+                                            <button className="btn btn-dark" type="submit">Reserve</button>
+                                        </form>
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>

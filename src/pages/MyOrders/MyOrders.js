@@ -48,15 +48,31 @@ const MyOrders = () => {
 
 
     return (
-        <div className="container p-5">
-            <h2>This is my order: {orders.length}</h2>
+        <div className="p-5">
+            <div className="col-md-6 mx-auto text-center pb-5">
+                <img className="img-fluid rounded-circle" src={user?.photoURL} alt="" />
+                <h2 className="text-warning">{user?.displayName}</h2>
+                <h2>Your reserved resort : <span className="text-danger">{orders.length}</span> </h2>
+            </div>
             <div className="row row-cols-md-4">
                 {
                     orders?.map(order =>
                         <div key={order._id} className="col">
-                            <div className="d-flex justify-content-between"><button className="btn btn-outline-info">{order?.status}</button> <button onClick={() => handleDeleteOrders(order._id)} className="btn btn-danger">Cancel</button></div>
-                            <div><h5>{order?.resort}</h5>
-                                <img src={order?.image} alt="" /></div>
+                            <div>
+                                <h6>Email : {order?.email}</h6>
+                                <h6>Phone : {order?.phone}</h6>
+                                <div className="d-flex justify-content-between">
+                                    <h6>Booking Date : {order?.date}</h6>
+                                    <h6>Cost : <span className="text-danger">{order?.cost} BDT</span> </h6>
+                                </div>
+
+                                <img className="img-fluid" style={{ height: "15rem" }} src={order?.image} alt="" />
+                                <h5>{order?.resort}</h5>
+                            </div>
+                            <div className="d-flex justify-content-between">
+                                <button className="btn btn-outline-info">{order?.status}</button>
+                                <button onClick={() => handleDeleteOrders(order._id)} className="btn btn-danger">Cancel</button>
+                            </div>
                         </div>
                     )
                 }
