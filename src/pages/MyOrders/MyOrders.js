@@ -36,10 +36,10 @@ const MyOrders = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('Canceled successfully');
-                        console.log(data);
+                        // console.log(data);
                         const remainingOrders = orders.filter(order => order._id !== id);
                         console.log(remainingOrders);
-                        console.log(myOrders);
+                        // console.log(myOrders);
                         setOrders(remainingOrders);
                     }
                 })

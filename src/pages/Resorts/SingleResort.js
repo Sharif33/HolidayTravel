@@ -36,7 +36,7 @@ const SingleResort = () => {
 
     return (
         <div>
-            <img style={{ height: "30rem" }} className='w-100' src={resorts?.image} alt="" />
+            <img style={{ height: "30rem" }} className='w-100 img-fluid' src={resorts?.image} alt="" />
             <div className='container py-5'>
                 <div className="row">
                     <div className="col-md-9">
@@ -56,20 +56,20 @@ const SingleResort = () => {
                             <div className="shadow p-4 bg-custom rounded">
                                 <h3 className="text-light py-2">Reserve this Resort</h3>
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input defaultValue={resorts?.name} {...register("resort", { required: true })} />
-                                    {errors.resort && <span className="text-warning">Please click again</span>}
-                                    <input defaultValue={resorts?.cost} {...register("cost")} />
+                                    <input defaultValue={resorts && resorts?.name} {...register("resort", { required: true })} />
+                                    {errors.resort && <span className="text-warning">This field is required. Please check again</span>}
+                                    <input defaultValue={resorts && resorts?.cost} {...register("cost")} />
                                     <input defaultValue="Pending..." {...register("status")} />
                                     <input defaultValue={user?.displayName} {...register("name")} />
                                     <input defaultValue={user?.email} {...register("email", { required: true })} />
-                                    {errors.email && <span className="text-warning">Please click again</span>}
+                                    {errors.email && <span className="text-warning">This field is required.Please check again</span>}
                                     <input placeholder="Address"  {...register("address")} />
                                     <input placeholder="City and country"  {...register("city")} />
                                     <input placeholder="Phone number"  {...register("phone")} />
                                     <input placeholder="Date" type="date" {...register("date")} />
 
-                                    <input defaultValue={resorts?.image} {...register("image", { required: true })} />
-                                    {errors.image && <span className="text-warning">Please click again</span>}
+                                    <input defaultValue={resorts && resorts?.image} {...register("image", { required: true })} />
+                                    {errors.image && <span className="text-warning">This field is required.Please check again</span>}
 
                                     <button className="btn btn-outline-light" type="submit">Reserved</button>
                                 </form>

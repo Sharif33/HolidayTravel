@@ -14,54 +14,58 @@ import feature6 from '../../images/cancunF.webp';
 const Banner = () => {
     return (
         <div className="container py-4">
-            <h1>Make Your Holiday Happier</h1>
-            <p>visit United States with <span>holidayTravel</span></p>
-            <div className="row g-0">
-                <div className="col-md-6">
-                    <div className="card text-white fw-bold">
-                        <img src={trip} className="card-img" alt="..." />
-                        <div className="card-img-overlay">
-                            <h2 className="card-title">Myrtle Beach</h2>
+            <div className="bg-light shadow roumded">
+                <div className="p-3">
+                    <h1>Make Your Holiday Happier</h1>
+                    <p>visit United States with <span>holidayTravel</span></p>
+                </div>
+                <div className="row g-0">
+                    <div className="col-md-6">
+                        <div className="card text-white fw-bold">
+                            <img src={trip} className="card-img" alt="..." />
+                            <div className="card-img-overlay">
+                                <h2 className="card-title">Myrtle Beach</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="card text-white fw-bold">
+                            <img src={trip2} className="card-img" alt="..." />
+                            <div className="card-img-overlay">
+                                <h2 className="card-title">Orange Beach</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6">
-                    <div className="card text-white fw-bold">
-                        <img src={trip2} className="card-img" alt="..." />
-                        <div className="card-img-overlay">
-                            <h2 className="card-title">Orange Beach</h2>
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <div className="card text-white fw-bold">
+                            <img src={trip3} className="card-img" alt="..." />
+                            <div className="card-img-overlay">
+                                <h2 className="card-title">Biloxi</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className="row g-0">
-                <div className="col-md-4">
-                    <div className="card text-white fw-bold">
-                        <img src={trip3} className="card-img" alt="..." />
-                        <div className="card-img-overlay">
-                            <h2 className="card-title">Biloxi</h2>
+                    <div className="col-md-4">
+                        <div className="card text-white fw-bold">
+                            <img src={trip4} className="card-img" alt="..." />
+                            <div className="card-img-overlay">
+                                <h2 className="card-title">Pensacola</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="card text-white fw-bold">
-                        <img src={trip4} className="card-img" alt="..." />
-                        <div className="card-img-overlay">
-                            <h2 className="card-title">Pensacola</h2>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="card text-white fw-bold">
-                        <img src={trip5} className="card-img" alt="..." />
-                        <div className="card-img-overlay">
-                            <h2 className="card-title">Perdido key</h2>
+                    <div className="col-md-4">
+                        <div className="card text-white fw-bold">
+                            <img src={trip5} className="card-img" alt="..." />
+                            <div className="card-img-overlay">
+                                <h2 className="card-title">Perdido key</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="my-4 pt-4 bg-light">
+            <div className="my-4 pt-4 bg-light shadow rounded my-5">
                 <div className="px-3">
                     <h3>Featured resort destinations</h3>
                     <p>Check out these popular destinations for resorts</p>
@@ -83,12 +87,11 @@ const Banner = () => {
                         <div className="card">
                             <img src={feature2} className="card-img" alt="..." />
                             <div className="card-img-overlay  fw-bold">
-                                <h5 className="card-title  text-white">Orlando</h5>
-
+                                <h5 className="card-title  text-white">Sharm El Sheikh</h5>
                             </div>
                             <div className="text-center fw-bold">
-                                <h6>United States</h6>
-                                <p>165 resorts</p>
+                                <h6>Egypt</h6>
+                                <p>136 resorts</p>
                             </div>
                         </div>
                     </div>
@@ -96,12 +99,11 @@ const Banner = () => {
                         <div className="card">
                             <img src={feature3} className="card-img" alt="..." />
                             <div className="card-img-overlay  fw-bold">
-                                <h5 className="card-title  text-white">Orlando</h5>
-
+                                <h5 className="card-title  text-white">Ubud</h5>
                             </div>
                             <div className="text-center fw-bold">
-                                <h6>United States</h6>
-                                <p>165 resorts</p>
+                                <h6>Indonesia</h6>
+                                <p>121 resorts</p>
                             </div>
                         </div>
                     </div>
@@ -109,12 +111,11 @@ const Banner = () => {
                         <div className="card">
                             <img src={feature4} className="card-img" alt="..." />
                             <div className="card-img-overlay  fw-bold">
-                                <h5 className="card-title  text-white">Orlando</h5>
-
+                                <h5 className="card-title  text-white">Porto Di Galinhas</h5>
                             </div>
                             <div className="text-center fw-bold">
-                                <h6>United States</h6>
-                                <p>165 resorts</p>
+                                <h6>Brazil</h6>
+                                <p>126 resorts</p>
                             </div>
                         </div>
                     </div>
@@ -122,12 +123,11 @@ const Banner = () => {
                         <div className="card">
                             <img src={feature5} className="card-img" alt="..." />
                             <div className="card-img-overlay  fw-bold">
-                                <h5 className="card-title  text-white">Orlando</h5>
-
+                                <h5 className="card-title  text-white">Myrtle Beach</h5>
                             </div>
                             <div className="text-center fw-bold">
                                 <h6>United States</h6>
-                                <p>165 resorts</p>
+                                <p>93 resorts</p>
                             </div>
                         </div>
                     </div>
@@ -135,12 +135,11 @@ const Banner = () => {
                         <div className="card">
                             <img src={feature6} className="card-img" alt="..." />
                             <div className="card-img-overlay  fw-bold">
-                                <h5 className="card-title  text-white">Orlando</h5>
-
+                                <h5 className="card-title  text-white">Ko Lanta</h5>
                             </div>
                             <div className="text-center fw-bold">
-                                <h6>United States</h6>
-                                <p>165 resorts</p>
+                                <h6>Thailand</h6>
+                                <p>108 resorts</p>
                             </div>
                         </div>
                     </div>

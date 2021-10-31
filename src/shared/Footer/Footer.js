@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer style={{ backgroundColor: "#63599E" }}>
+            <footer style={{ backgroundColor: "#223A5E" }}>
                 <div className="row row-cols-1 row-cols-md-3 mx-2 mt-2 g-4 px-4 text-white border-bottom border-secondary">
                     <div className="p-4">
                         <h4 className="border-bottom border-warning text-warning pb-2">Our Services</h4>
@@ -19,7 +19,7 @@ const Footer = () => {
                     <div className="p-4">
                         <h4 className="border-bottom text-info border-info pb-2">Contact US</h4>
                         <p><i className="fas fa-map-marker-alt"></i> Eastern Housing, Dhaka, Bangladesh</p>
-                        <p><i className="fas fa-envelope"></i> info123@health.com</p>
+                        <p><i className="fas fa-envelope"></i> info123@holidaytravel.com</p>
                         <p><i className="fas fa-phone-alt"></i> +880 123-456-789</p>
                         <p><i className="fas fa-phone-alt"></i> +880 456-123-987</p>
                     </div>

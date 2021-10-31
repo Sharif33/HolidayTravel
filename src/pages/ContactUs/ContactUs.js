@@ -61,19 +61,19 @@ const ContactUs = () => {
 
                 <div className="col-md-8 mx-auto my-4">
                     <div className="bg-white">
-                        <h5 className="text-center border p-3">Help Center</h5>
+                        <h5 className="text-center border p-3 shadow">Help Center</h5>
                         <div className="p-4">
                             <h3>Welcome to the Help Centre</h3>
                             <p>Sign in to contact Customer Service, we're available 24 hours a day</p>
                         </div>
-                        <div className="p-4 border">
+                        <div className="p-4 shadow">
                             <div className="row row-cols-md-2 ">
                                 <div className="p-4">
-                                    <h5>Live Chat</h5>
+                                    <h5><span><i className="fas fa-comments fs-2"></i></span> Live Chat</h5>
                                     <small>The fastest way to talk to one of our Customer Service agents about your bookings.</small>
                                 </div>
                                 <div className="p-4">
-                                    <h5>Call Us</h5>
+                                    <h5><span><i className="fas fa-phone-volume fs-2"></i></span> Call Us</h5>
                                     <small>For anything urgent, you can call us 24/7 on a local or international phone number.</small>
                                 </div>
                             </div>
